@@ -1,5 +1,5 @@
 const newBookBtn = document.getElementById('addNewBookButton');
-
+const radioBtn = document.querySelectorAll('input[type="radio"]');
 
 newBookBtn.addEventListener('click', () => {
     const formOn = document.getElementById('myForm');
@@ -9,4 +9,10 @@ newBookBtn.addEventListener('click', () => {
     } else {
         formOn.classList.add('show');
     }
+})
+
+radioBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        
+    })
 })

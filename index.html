@@ -12,19 +12,46 @@
             <h1 class="library-title">My Library</h1>
             <button class="addNewBookButton" id="addNewBookButton">New Book</button>
             <form action="#" class="myForm" id="myForm">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title">
+                <div class="book-details">
+                    <div class="input-details">
+                        <span class="details">Title:</span>
+                        <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                    </div>
+                    <div class="input-details">
+                        <span class="details">Author:</span>
+                        <input type="text" id="author" name="author" placeholder="Enter the author name" required>
+                    </div>
+                    <div class="input-details">
+                        <span class="details">Number of pages:</span>
+                        <input type="text" id="pages" name="pages" placeholder="Enter the number of pages" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title">
+                <div class="read-details">
+                    <input type="radio" name="confirm" id="dot-yes">
+                    <input type="radio" name="confirm" id="dot-no">
+                    <span class="read-title">Read?</span>
+                    <div class="category">
+                        <label for="dot-yes">
+                            <span class="dot yes"></span>
+                            <span class="confirm">Yes</span>
+                        </label>
+                        <label for="dot-no">
+                            <span class="dot no"></span>
+                            <span class="confirm">No</span>
+                        </label>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title">
+                <div class="submit-button">
+                    <button type="submit">Submit</button>
                 </div>
             </form>
+            <div class="book-list-container" id="book-list-container">
+                <div class="book-info" id="book-info">
+                    <span class="book-title">harry potter</span>
+                    <span class="book-authot">jk rowling</span>
+                    <span class="book-page">1000</span>
+                </div>
+            </div>
         </div>
     </body>
 </html>

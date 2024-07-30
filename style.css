@@ -5,18 +5,19 @@
 
 body {
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background: linear-gradient(135deg, #DFFC75, #21FC8F);
+
 }
 
 .library-container {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(135deg, #DFFC75, #21FC8F);
 }
 
 .library-container h1 {
@@ -30,7 +31,7 @@ body {
     font-size: 1rem;
     font-weight: 500;
     padding: 0.5em 1em;
-    border: 2px solid black;
+    border: 1px solid #969696;
     border-radius: 5px;
     margin-bottom: 1rem;
     background: white;
@@ -43,9 +44,123 @@ body {
 }
 
 .myForm {
+    max-width: 350px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    padding: 1em 1.9em;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+
 }
 
 .show {
+    display: flex;
+}
+
+.myForm .book-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.myForm .book-details .input-details {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.input-details .details {
     display: block;
 }
+
+
+.input-details input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-details input:focus,
+.input-details input:valid {
+    border-color: #DFFC75;
+}
+
+.myForm .read-details {
+    width: 100%;
+    display: flex;
+}
+
+.myForm .read-details .read-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.myForm .read-details .category {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.read-details .category label {
+    display: flex;
+    align-items: center;
+}
+
+.read-details .category .dot {
+    height: 1rem;
+    width: 1rem;
+    background-color: #969696;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+}
+
+#dot-yes:checked ~ .category label .yes,
+#dot-no:checked ~ .category label .no {
+    border-color:#969696;
+    background: #21FC8F;
+}
+
+.read-details input[type='radio'] {
+    display: none;
+}
+
+.myForm .submit-button {
+    width: 100%;
+    height: 35px;
+    margin: 25px 0;
+}
+
+.myForm .submit-button button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #DFFC75, #21FC8F);
+    letter-spacing: 1px;
+
+}
+
+.myForm .submit-button button:hover {
+    background: linear-gradient(-135deg, #DFFC75, #21FC8F);
+}
+
+
