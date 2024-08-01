@@ -9,7 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background: linear-gradient(135deg, #DFFC75, #21FC8F);
+    background: linear-gradient(135deg, #1f56ee, #fc5421);
+    background-size: cover;
 
 }
 
@@ -154,13 +155,14 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 500;
-    background: linear-gradient(135deg, #DFFC75, #21FC8F);
+    background: linear-gradient(135deg, #1f56ee, #fc5421);
     letter-spacing: 1px;
 
 }
 
 .myForm .submit-button button:hover {
-    background: linear-gradient(-135deg, #DFFC75, #21FC8F);
+    background: linear-gradient(-135deg, #1f56ee, #fc5421);
+    
 }
 
 .book-list-container {
@@ -206,6 +208,17 @@ body {
 .toggle-read-btn {
     border: none;
     margin-bottom: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.readClr {
+    background-color: rgb(5, 243, 5);
+}
+
+.not-read {
+    background-color:yellow;
 }
 
 .removeBtn {

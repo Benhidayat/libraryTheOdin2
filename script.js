@@ -41,6 +41,15 @@ function toggleRead (index) {
     renderBookList();
 }
 
+function changeReadColor(condition) {
+    const clrChange = document.getElementById('toggle-read-btn');
+    // clrChange.classList.remove('read');
+    // clrChange.classList.remove('not-read');
+    return condition === 'Read'
+    ? clrChange.classList.add('readClr')
+    : clrChange.classList.add('not-read');
+}
+
 function addNewBook() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
@@ -65,11 +74,10 @@ function renderBookList() {
             <span class="book author">${book.author}</span>
             <span class="book title">${book.title}</span>
             <span class="book page">${book.pages}</span>
-            <button type="button" class="toggle-read-btn" onclick="toggleRead(${i})">${readStyle}</button>
-            
+            <button type="button" class="toggle-read-btn" id="toggle-read-btn" onclick="toggleRead(${i})">${readStyle}</button>
         `;
-
         libraryContainer.appendChild(bookInfo);
+        changeReadColor(readStyle);
     }
     
 }
