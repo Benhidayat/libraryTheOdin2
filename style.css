@@ -187,7 +187,11 @@ body {
     outline: none;
     background: #fff;
 
-}   
+}  
+
+.book-list-container .book-info {
+    display: flex;
+}
 
 .book-list-container .book-info .book:not(:last-child) {
     margin-bottom: 1rem;
@@ -201,4 +205,22 @@ body {
 
 .toggle-read-btn {
     border: none;
+    margin-bottom: 1rem;
+}
+
+.removeBtn {
+    align-self: flex-end;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    outline: none;
+    border: 2px solid #969696;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.removeBtn:hover {
+    background-color: rgb(197, 12, 12);
+    color: #fff;
+    border-color: #fff;
 }

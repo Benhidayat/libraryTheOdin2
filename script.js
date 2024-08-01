@@ -61,13 +61,21 @@ function renderBookList() {
         bookInfo.classList.add('book-info');
         let readStyle = book.read === "yes" ? "Read" : "Not Read Yet";
         bookInfo.innerHTML = `
+            <button class="removeBtn" onclick="removeBook(${i})">x</button>
             <span class="book author">${book.author}</span>
             <span class="book title">${book.title}</span>
             <span class="book page">${book.pages}</span>
             <button type="button" class="toggle-read-btn" onclick="toggleRead(${i})">${readStyle}</button>
+            
         `;
 
         libraryContainer.appendChild(bookInfo);
     }
     
+}
+
+//remove book from book list
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    renderBookList();
 }
