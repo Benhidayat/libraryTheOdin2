@@ -21,18 +21,21 @@ function showForm() {
 }
 
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
 
-Book.prototype.toggle = function() {
-    if (this.read === "yes") {
-        this.read = "no";
-    } else {
-        this.read = "yes";
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    toggle () {
+       if (this.read === 'yes') {
+        this.read = 'no';
+       } else {
+        this.read = 'yes';
+       }
     }
 }
 
@@ -70,7 +73,9 @@ function renderBookList() {
         bookInfo.classList.add('book-info');
         let readStyle = book.read === "yes" ? "Read" : "Not Read Yet";
         bookInfo.innerHTML = `
-            <button class="removeBtn" onclick="removeBook(${i})">x</button>
+            <button class="removeBtn" onclick="removeBook(${i})">
+                <span class="material-symbols-outlined">delete_forever</span>
+            </button>
             <span class="book author">${book.author}</span>
             <span class="book title">${book.title}</span>
             <span class="book page">${book.pages}</span>
